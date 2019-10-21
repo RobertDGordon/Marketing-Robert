@@ -1,7 +1,7 @@
 // Mixins in here
 .custom-btn(@bg-color:@button-bg, @width: 20rem, @txt-color:@white){
     display: flex;
-    background-color: @bg-color;
+    background-color:@bg-color;
     margin: 0 10px 20px;
     cursor: pointer;
     width: @width;
@@ -11,13 +11,15 @@
     font-size: 2rem;
     border-radius: 10px;
     border: 1px solid @silver;
-    color:@txt-color;
-    
-    &:hover{
-      background-color: @txt-color;
-      color: @bg-color;
+    color: @txt-color;
+    transition:all 0.6s;
+    a {
+      text-decoration: none;
+      color: @white;
     }
-  
+    &:hover{
+      background-color: @link-color;
+    }
     @media @mobile{
         width: 90%;
         height: 50px;
